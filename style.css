@@ -58,12 +58,17 @@ body {
 /* HERO 🔥 */
 .hero {
   width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
+/* 🔥 முக்கியம் */
 .hero-img {
   width: 100%;
   height: auto;
   display: block;
+
+  object-fit: contain;   /* 🔥 crop இல்லாமல் full image */
 }
 
 /* ABOUT */
