@@ -1,0 +1,79 @@
+```html
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>நிகழ்வுகள்</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/events.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <h2 class="logo">அகண்ட தமிழ் உலகம்</h2>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#" class="active">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- TITLE -->
+<section class="events">
+  <h1 class="title">போட்டி நிகழ்ச்சிகள்</h1>
+
+  <div class="event-grid">
+
+    <a href="katturai.html" class="card">
+      <img src="assets/katurai.webp">
+      <h2>✍️ கட்டுரை போட்டி</h2>
+    </a>
+
+    <a href="shortfilm.html" class="card">
+      <img src="assets/short.jpg">
+      <h2>🎬 குறும்பட போட்டி</h2>
+    </a>
+
+    <a href="book.html" class="card">
+      <img src="assets/book.jpg">
+      <h2>📖 நூல் மதிப்பீடு</h2>
+    </a>
+
+    <a href="teacher-exam.html" class="card">
+      <img src="assets/exam.jpg">
+      <h2>🧑‍🏫 அறிவு மதிப்பீடு</h2>
+    </a>
+
+    <a href="#" class="card">
+      <img src="assets/research.png">
+      <h2>📊 ஆய்வரங்கு</h2>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Tamil Conference</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
+```
