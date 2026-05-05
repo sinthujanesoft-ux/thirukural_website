@@ -1,0 +1,142 @@
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Hind Madurai', sans-serif;
+  background: radial-gradient(circle at top, #7a1a00, #1a0000);
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(0,0,0,0.9);
+  border-bottom: 1px solid gold;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.logo {
+  color: gold;
+  font-weight: bold;
+}
+
+/* NAV LINKS */
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: gold;
+}
+
+/* MOBILE MENU */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* TITLE */
+.title {
+  text-align: center;
+  padding: 50px 20px;
+  font-size: 36px;
+  color: gold;
+}
+
+/* GRID */
+.events {
+  padding: 30px;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+/* TEXT */
+.card h2 {
+  margin-top: 12px;
+  font-size: 18px;
+  color: gold;
+}
+
+/* HOVER */
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card:hover h2 {
+  color: #ffd700;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid gold;
+  margin-top: 40px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: black;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+```
