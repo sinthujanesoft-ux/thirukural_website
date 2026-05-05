@@ -9,7 +9,6 @@
 body {
   font-family: 'Hind Madurai', sans-serif;
   background: radial-gradient(circle at top, #8b2c00, #1a0000);
-  background-attachment: fixed;
   color: #f5e6c8;
 }
 
@@ -17,10 +16,7 @@ body {
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 1000;
-
-  background: rgba(0,0,0,0.8);
-  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.85);
   border-bottom: 1px solid gold;
 }
 
@@ -28,13 +24,10 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 15px 20px;
-  align-items: center;
 }
 
 .logo {
   color: gold;
-  font-size: 20px;
-  font-weight: bold;
 }
 
 /* NAV */
@@ -47,79 +40,71 @@ body {
 .nav a {
   color: white;
   text-decoration: none;
-  position: relative;
-  transition: 0.3s;
 }
 
-/* underline animation */
-.nav a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: gold;
-  left: 0;
-  bottom: -5px;
-  transition: 0.3s;
-}
-
-.nav a:hover::after {
-  width: 100%;
-}
-
-.nav a.active,
 .nav a:hover {
   color: gold;
 }
 
-/* MOBILE MENU */
 .menu-toggle {
   display: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
 }
 
-/* ABOUT SECTION */
+/* ABOUT */
 .about {
   padding: 80px 20px;
 }
 
-/* GLASS BOX */
 .about-box {
-  max-width: 650px;              /* 🔥 FIX width */
+  max-width: 1000px;
   margin: auto;
-
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(15px);
-
   padding: 40px;
+
+  background: rgba(255,255,255,0.05);
   border-radius: 25px;
-
-  border: 1px solid rgba(255,215,0,0.25);
-
-  box-shadow: 0 10px 40px rgba(255,215,0,0.15);
-
-  text-align: center;            /* 🔥 CENTER ALIGN */
-  animation: fadeUp 1s ease;
+  border: 1px solid rgba(255,215,0,0.2);
 }
 
-/* TITLE */
-.about-box h1 {
-  text-align: center;
-  color: gold;
-  margin-bottom: 25px;
-  font-size: 32px;
-  line-height: 1.4;
+/* FLEX */
+.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 /* TEXT */
-.about-box p {
-  text-align: center;            /* 🔥 MAIN FIX */
-  line-height: 2;                /* better spacing */
-  margin-bottom: 15px;
-  font-size: 16px;
-  letter-spacing: 0.5px;
+.about-text h1 {
+  color: gold;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+#moreText {
+  display: none;
+}
+
+/* BUTTON */
+.read-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: gold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.read-btn:hover {
+  background: #ffd700;
+}
+
+/* IMAGE */
+.about-img img {
+  width: 250px;
+  border-radius: 20px;
 }
 
 /* TEAM */
@@ -130,52 +115,31 @@ body {
 
 .team h2 {
   color: gold;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
-/* TEAM GRID */
+/* GRID */
 .team-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 25px;
 }
 
-/* MEMBER CARD */
-.member {
-  width: 220px;
-  text-align: center;
-  transition: 0.4s;
-}
-
-/* IMAGE */
+/* MEMBER */
 .member img {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
-
   border: 3px solid gold;
-  padding: 5px;
-
-  box-shadow: 0 0 20px rgba(255,215,0,0.3);
 }
 
-/* NAME */
 .member h3 {
-  margin-top: 15px;
-  font-size: 18px;
+  margin-top: 10px;
 }
 
-/* ROLE */
 .member p {
   color: gold;
-  margin-top: 5px;
-}
-
-/* HOVER */
-.member:hover {
-  transform: translateY(-12px) scale(1.05);
 }
 
 /* FOOTER */
@@ -183,19 +147,6 @@ footer {
   text-align: center;
   padding: 20px;
   border-top: 1px solid gold;
-  margin-top: 40px;
-}
-
-/* ANIMATION */
-@keyframes fadeUp {
-  from {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 /* MOBILE */
@@ -205,8 +156,6 @@ footer {
     display: none;
     flex-direction: column;
     background: black;
-    width: 100%;
-    text-align: center;
   }
 
   .nav.active {
@@ -217,17 +166,17 @@ footer {
     display: block;
   }
 
-  .about-box {
-    padding: 25px;
+  .about-flex {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .about-box h1 {
-    font-size: 24px;
+  .about-img img {
+    width: 100%;
   }
 
-  .about-box p {
-    font-size: 15px;
-    line-height: 1.9;
+  .team-container {
+    grid-template-columns: repeat(2,1fr);
   }
 
 }
